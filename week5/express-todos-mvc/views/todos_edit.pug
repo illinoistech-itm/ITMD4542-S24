@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Use the form below to edit this todo.
+  hr
+  if msg 
+    p(class='redtext')= msg
+  form(method='POST' action=`/todos/${todo.id}/edit`)
+    input(type='text' name='todoText' value=todo.text)
+    | 
+    button(type='submit') Save Changes
+    | 
+    a(href='/todos') Cancel

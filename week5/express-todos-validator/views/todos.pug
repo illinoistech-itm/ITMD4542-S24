@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href='/todos/add') Add a Todo
+  hr
+  if todos.length > 0
+    #todos-wrapper 
+      ul.todos-list 
+        each val in todos 
+          li(data-todoid=val.id)
+            a(href=`/todos/${val.id}`)=  val.text

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  hr 
+  form(method='POST', action='/file-upload', enctype='multipart/form-data')
+    .input-group
+      label What is your name?
+      | 
+      input(type='text', name='userName')
+    .input-group 
+      label Select files 
+      | 
+      input(type='file', name='userFiles', multiple)
+    button(type='submit') Upload  
