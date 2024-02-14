@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p= todo.text
+  div.todo-actions 
+    a(href=`/todos/${todo.id}/delete`) Delete Todo
+    | 
+    a(href=`/todos/${todo.id}/edit`) Edit Todo
