@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Are you sure you want to delete the following Todo?
+  hr
+  form(method='POST' action=`/todos/${todo.id}/delete`)
+    button(type='submit') Confirm Delete
+    | 
+    a(href=`/todos/${todo.id}`) Cancel
