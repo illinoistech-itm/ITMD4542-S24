@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Login 
+  a(href="/login/federated/google") Sign in with Google 
+  form(action="/login/password", method="POST")
+    section 
+      label(for="email") Email 
+      input(type="email", name="email")
+    section 
+      label(for="password") Password 
+      input(type="password", name="password")
+    button(type="submit") Sign In
+  a(href="/signup") Sign Up 
