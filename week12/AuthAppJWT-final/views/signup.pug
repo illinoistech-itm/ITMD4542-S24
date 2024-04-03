@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Sign Up 
+  form(action="/signup", method="POST")
+    section 
+      label(for="email") Email 
+      input(type="email", name="email")
+    section 
+      label(for="password") Password 
+      input(type="password", name="password")
+    button(type="submit") Sign Up
